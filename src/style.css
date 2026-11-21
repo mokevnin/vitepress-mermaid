@@ -1,0 +1,26 @@
+.mermaid-diagram {
+  margin: 16px 0;
+  overflow-x: auto;
+  text-align: center;
+}
+
+.mermaid-diagram svg {
+  max-width: 100%;
+  height: auto;
+}
+
+/*
+ * mermaid measures labels with the body line height; the .vp-doc paragraph
+ * style (28px, margins) would otherwise clip the last line of every node.
+ */
+.vp-doc .mermaid-diagram p {
+  margin: 0;
+  line-height: 24px;
+}
+
+.mermaid-diagram[data-mermaid-error] {
+  white-space: pre;
+  text-align: left;
+  font-family: var(--vp-font-family-mono, monospace);
+  color: var(--vp-c-danger-1, #d33);
+}

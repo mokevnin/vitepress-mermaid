@@ -1,0 +1,51 @@
+{
+  "name": "@mokevnin/vitepress-mermaid",
+  "version": "0.1.0",
+  "description": "Mermaid diagrams and charts for VitePress: a markdown-it fence plugin and a client-only Vue component with dark mode support",
+  "keywords": [
+    "vitepress",
+    "mermaid",
+    "markdown-it",
+    "diagrams",
+    "vue"
+  ],
+  "license": "MIT",
+  "author": "Kirill Mokevnin",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mokevnin/vitepress-mermaid.git"
+  },
+  "type": "module",
+  "exports": {
+    "./markdown": {
+      "types": "./src/markdown.d.ts",
+      "default": "./src/markdown.js"
+    },
+    "./client": {
+      "types": "./src/client.d.ts",
+      "default": "./src/client.js"
+    },
+    "./style.css": "./src/style.css"
+  },
+  "files": [
+    "src"
+  ],
+  "sideEffects": [
+    "*.css"
+  ],
+  "scripts": {
+    "test": "node --test",
+    "typecheck": "tsc -p ."
+  },
+  "peerDependencies": {
+    "mermaid": "^11.0.0 || ^12.0.0",
+    "vue": "^3.4.0"
+  },
+  "devDependencies": {
+    "@types/node": "^26.6.6",
+    "markdown-it": "^15.0.3",
+    "mermaid": "^12.3.0",
+    "typescript": "^7.0.2",
+    "vue": "^3.5.45"
+  }
+}

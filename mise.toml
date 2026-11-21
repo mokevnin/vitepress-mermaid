@@ -1,0 +1,6 @@
+[tools]
+node = "26"
+
+[tasks.check]
+description = "Tests and type check, the same set as CI"
+run = ["npm test", "npm run typecheck"]
